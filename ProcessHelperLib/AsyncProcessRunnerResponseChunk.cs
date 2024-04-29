@@ -1,0 +1,3 @@
+namespace ProcessHelperLib;
+
+public record AsyncProcessRunnerResponseChunk(AsyncProcessRunnerResponseChunkType Type, string Content);

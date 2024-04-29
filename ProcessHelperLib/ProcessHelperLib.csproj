@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(VersionSuffix)'!='' ">
+      <PropertyGroup>
+        <PackageVersion>$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(VersionSuffix)'=='' ">
+      <PropertyGroup>
+        <PackageVersion>$(VersionPrefix)</PackageVersion>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <PropertyGroup>
+    <PackageId>ProcessHelperLib</PackageId>
+    <Authors>Juraj Ahel</Authors>
+    <Description>ProcessHelperLib makes it easier to run external processes, especially running them async while capturing output.</Description>
+    <PackageProjectUrl>https://github.com/xeniorn/ProcessHelperLib</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xeniorn/ProcessHelperLib</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>helper;library</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath=""/>
+    <None Include="../LICENSE" Pack="true" PackagePath=""/>
+    <None Include="../Resources/icon.png" Pack="true" PackagePath=""/>
+  </ItemGroup>
+
+</Project>

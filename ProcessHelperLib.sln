@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34607.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessHelperLib_Test", "ProcessHelperLib_Test\ProcessHelperLib_Test.csproj", "{A3BFF1D3-83B3-47BB-84DD-0B7F8571A0B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessHelperLib", "ProcessHelperLib\ProcessHelperLib.csproj", "{97AA31A9-7D8A-4F6C-B0CE-883A252102DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3BFF1D3-83B3-47BB-84DD-0B7F8571A0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BFF1D3-83B3-47BB-84DD-0B7F8571A0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BFF1D3-83B3-47BB-84DD-0B7F8571A0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BFF1D3-83B3-47BB-84DD-0B7F8571A0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AA31A9-7D8A-4F6C-B0CE-883A252102DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AA31A9-7D8A-4F6C-B0CE-883A252102DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AA31A9-7D8A-4F6C-B0CE-883A252102DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AA31A9-7D8A-4F6C-B0CE-883A252102DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8E725B3-8DB2-46AE-A52B-8723BEF72E51}
+	EndGlobalSection
+EndGlobal
