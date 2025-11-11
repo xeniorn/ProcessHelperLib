@@ -19,15 +19,6 @@ on:
         description: 'version to build'
         required: true
         default: '0.0.0-test'
-        type: string
-      dotnet_versions:
-        description: 'Dotnet versions to require in setup'
-        required: true
-        default: |
-          6.x
-          7.x
-          8.x
-          9.x
         type: string      
 
 env:
@@ -35,6 +26,11 @@ env:
   PACK_PROJECT_PATH: './ProcessHelperLib/ProcessHelperLib.csproj'
   PROJECT_NAME: 'ProcessHelperLib'
   TARGET_CONFIGURATION: 'Release'
+  DOTNET_REQUIRED_VERSIONS: |
+          6.x
+          7.x
+          8.x
+          9.x
     
 jobs:
   build_and_deploy_nuget:
@@ -64,9 +60,9 @@ jobs:
       if: "${{ inputs.override_version == true || inputs.override_version == 'true' }}"
       run: echo "VERSION=${{ inputs.version }}" >> $GITHUB_ENV
     - name: Setup dotnet
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: ${{ inputs.dotnet_versions }}           
+        dotnet-version: ${{ env.DOTNET_REQUIRED_VERSIONS }}           
     - name: Build
       run: dotnet build --configuration ${TARGET_CONFIGURATION} /p:Version=${VERSION}
     - name: Test
